@@ -8575,17 +8575,17 @@ h1, h2, h3, h4, h5,
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
-  background: #4986fc;
+  /* background: #4986fc; */
   padding: 0 20px;
-  background: #ce4be8;
-  background: -moz-linear-gradient(-45deg, #fff9f905 0%, #ffffff1f 100%);
+  /* background: #ce4be8; */
+  /* background: -moz-linear-gradient(-45deg, #fff9f905 0%, #ffffff1f 100%);
   background: -webkit-gradient(left top, right bottom, color-stop(0%, #fff9f905), color-stop(100%, #ffffff1f));
   background: -webkit-linear-gradient(-45deg, #fff9f905 0%, #ffffff1f 100%);
   background: -o-linear-gradient(-45deg, #fff9f905 0%, #ffffff1f 100%);
   background: -ms-linear-gradient(-45deg, #fff9f905 0%, #ffffff1f 100%);
   background: -webkit-linear-gradient(315deg, #fff9f905 0%,#ffffff1f 100%);
   background: -o-linear-gradient(315deg, #fff9f905 0%, #ffffff1f 100%);
-  background: linear-gradient(135deg, #fff9f905 0%, #ffffff1f 100%);
+  background: linear-gradient(135deg, #fff9f905 0%, #ffffff1f 100%); */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce4be8', endColorstr='#207ce5', GradientType=1 ); }
 
 .hero-wrap {

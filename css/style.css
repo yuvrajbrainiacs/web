@@ -9301,7 +9301,7 @@ textarea.form-control {
       bottom: 0;
       content: '';
       opacity: .6;
-      background: #4fc23387;
+      background: #000000;
       z-index: -1; }
   @media (max-width: 991.98px) {
     .ftco-intro {
@@ -9611,7 +9611,7 @@ textarea.form-control {
     z-index: -1;
     opacity: .8;
     background: #000000;
-    background: #ce4be8;
+    /* background: #ce4be8;
     background: -moz-linear-gradient(-45deg, #8BC34A 0%, #09090a9e 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%,#8BC34A), color-stop(100%, #09090a9e));
     background: -webkit-linear-gradient(-45deg, #8BC34A 0%, #09090a9e 100%);
@@ -9619,7 +9619,7 @@ textarea.form-control {
     background: -ms-linear-gradient(-45deg, #8BC34A 0%, #09090a9e 100%);
     background: -webkit-linear-gradient(315deg, #8BC34A 0%, #09090a9e 100%);
     background: -o-linear-gradient(315deg, #8BC34A 0%, #09090a9e 100%);
-    background: linear-gradient(135deg, #8BC34A 0%, #09090a9e 100%);
+    background: linear-gradient(135deg, #8BC34A 0%, #09090a9e 100%); */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce4be8', endColorstr='#207ce5', GradientType=1 ); }
 
 @media (max-width: 1199.98px) {

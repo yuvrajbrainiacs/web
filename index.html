@@ -136,60 +136,55 @@
 </section>
 </section>
  <!-- ABOUT -->
-     <section class="ftco-section bg-light" id="about" style="position: relative; padding: 95px 0; display: block; box-sizing: border-box;">
-        <div class="container" style="    padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;">
-             <div class="row" style="margin-right: -15px; margin-left: -15px;">
-
-                  <div class="col-md-6 col-sm-12" >
-                       <div class="about-info">
-                            <h2>Start your journey to a better life with online practical courses</h2>
-
-                            <figure>
-                                 <span><i class="fa fa-users"></i></span>
-                                 <figcaption>
-                                      <h3>Professional Trainers</h3>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                 </figcaption>
-                            </figure>
-
-                            <figure>
-                                 <span><i class="fa fa-certificate"></i></span>
-                                 <figcaption>
-                                      <h3>International Certifications</h3>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                 </figcaption>
-                            </figure>
-
-                            <figure>
-                                 <span><i class="fa fa-bar-chart-o"></i></span>
-                                 <figcaption>
-                                      <h3>Free for 3 months</h3>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                 </figcaption>
-                            </figure>
-                       </div>
-                  </div>
-
-                  <div class="col-md-offset-1 col-md-4 col-sm-12" style="margin-left: 8.33333333%;">
-                       <div class="entry-form">
-                            <form action="#" method="post">
-                                 <h2>Signup today</h2>
-                                 <input type="text" name="full name" class="form-control" placeholder="Full name" required="" style="color: #f3efef;">
-
-                                 <input type="email" name="email" class="form-control" placeholder="Your email address" required="">
-
-                                 <input type="password" name="password" class="form-control" placeholder="Your password" required="">
-
-                                 <button class="submit-btn form-control" id="form-submit">Get started</button>
-                            </form>
-                       </div>
-                  </div>
-
-             </div>
+ <section class="ftco-section bg-light" id="about" style="position: relative; padding: 95px 0; display: block; box-sizing: border-box;">
+    <div class="container" style="padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;">
+      <div class="row" style="margin-right: -15px; margin-left: -15px;">
+  
+        <div class="col-md-6 col-sm-12">
+          <div class="about-info">
+            <h2>Start your journey to a better life with online practical courses</h2>
+  
+            <figure>
+              <span><i class="fa fa-users"></i></span>
+              <figcaption>
+                <h3>Professional Trainers</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+              </figcaption>
+            </figure>
+  
+            <figure>
+              <span><i class="fa fa-certificate"></i></span>
+              <figcaption>
+                <h3>International Certifications</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+              </figcaption>
+            </figure>
+  
+            <figure>
+              <span><i class="fa fa-bar-chart-o"></i></span>
+              <figcaption>
+                <h3>Free for 3 months</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+              </figcaption>
+            </figure>
+          </div>
         </div>
-   </section>
+  
+        <div class="col-md-offset-1 col-md-4 col-sm-12" style="margin-left: 8.33333333%;">
+          <div class="video-container">
+            <video controls  autoplay muted>
+              <source src="./assets/videoplayback.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
    <style>
-    /* Additional styles for the "About Us" section */
+ /* Additional styles for the "About Us" section */
 #about {
   padding: 60px 0;
 }
@@ -205,15 +200,21 @@
   align-items: center;
   margin-bottom: 30px;
 }
-.entry-form{
-        background: #3e3c3c;
-    border-radius: 100%;
-    text-align: center;
-    padding: 6em;
-    width: 450px;
-    height: 450px;
+
+.video-container {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 450px;
+  height: 400px;
+  margin: 0 auto;
 }
 
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .about-info figure span {
   display: flex;
@@ -228,7 +229,7 @@
 
 .about-info figure span i {
   font-size: 28px;
-  color: #2fa840;;
+  color: #2fa840;
 }
 
 .about-info figure figcaption {
@@ -244,59 +245,6 @@
 .about-info figure p {
   margin: 0;
   font-size: 16px;
-}
-
-
-.entry-form h2 {
-  font-size: 24px;
-  font-weight: 600;
-  color:white;
-  margin-bottom: 20px;
-}
-
-.entry-form .form-control {
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid;
-    border-radius: 0;
-    box-shadow: none;
-    height: 45px;
-    margin: 10px 0;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #f3efef;
-}
-.entry-form .form-control::-webkit-input-placeholder {
-  color: lightgray; /* Set the placeholder text color to light gray for Chrome and Safari */
-}
-
-.entry-form .form-control::-moz-placeholder {
-  color: lightgray; /* Set the placeholder text color to light gray for Firefox */
-}
-
-.entry-form .form-control:-ms-input-placeholder {
-  color: lightgray; /* Set the placeholder text color to light gray for IE */
-}
-
-.entry-form .form-control::placeholder {
-  color: lightgray; /* Set the placeholder text color to light gray for modern browsers */
-}
-.entry-form .submit-btn {
-    background: #ffffff;
-    border-radius: 50px;
-    border: 0;
-    color: #1b1919;
-    width: 50%;
-    height: 50px;
-    margin: 30px auto;
-    box-shadow: none;
-    margin-bottom: 10px;
-    transition: 0.5s;
-}
-
-.submit-btn:hover {
-  background-color: #3cf93f;
 }
 
    </style>

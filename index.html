@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>StudyLab - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Brainiacs</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -99,41 +99,99 @@
 </div>
 </div>
 </div>
+<style>
+    /* Your CSS styles go here */
+    /* Example style for the success message container */
+    .success-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #2fa840;
+        color: #fff;
+        border-radius: 5px;
+        z-index: 9999;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
 
+    .success-popup p {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .success-popup .btn-ok {
+        cursor: pointer;
+        color: #fff;
+        background-color: #fff;
+        color: #2fa840;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .success-popup .btn-ok:hover {
+        background-color: #f8f8f8;
+    }
+</style>
 <section class="ftco-section ftco-no-pb ftco-no-pt" id="home">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-7"></div>
-         <div class="col-md-5 order-md-last">
-          <div class="login-wrap p-4 p-md-5">
-              <h3 class="mb-4">Register Now</h3>
-              <form action="#" class="signup-form">
-                 <div class="form-group">
-                    <label class="label" for="name">Full Name</label>
-                    <input type="text" class="form-control" placeholder="John Doe">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7"></div>
+            <div class="col-md-5 order-md-last">
+                <div class="login-wrap p-4 p-md-5">
+                    <h3 class="mb-4">Register Now</h3>
+                    <form action="#" class="signup-form" onsubmit="showSuccessPopup(event)">
+                        <div class="form-group">
+                            <label class="label" for="name">Full Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="email">Email Address</label>
+                            <input type="text" class="form-control" placeholder="johndoe@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="Number">Mobile Number</label>
+                            <input type="number" class="form-control" placeholder="Mobile number">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="password">College name</label>
+                            <input type="text" class="form-control" placeholder="College Name">
+                        </div>
+                        <div class="form-group d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-primary submit"><span class="fa fa-paper-plane"></span></button>
+                        </div>
+                    </form>
+                    <p class="text-center">Technology is best when it brings people <a href="#">together.</a></p>
                 </div>
-                <div class="form-group">
-                    <label class="label" for="email">Email Address</label>
-                    <input type="text" class="form-control" placeholder="johndoe@gmail.com">
-                </div>
-                <div class="form-group">
-                 <label class="label" for="Number">Mobile Number</label>
-                 <input id="password-field" type="number" class="form-control" placeholder="Mobile number">
-             </div>
-             <div class="form-group">
-                 <label class="label" for="password">College name</label>
-                 <input id="password-field" type="text" class="form-control" placeholder="College Name">
-             </div>
-             <div class="form-group d-flex justify-content-end mt-4">
-                 <button type="submit" class="btn btn-primary submit"><span class="fa fa-paper-plane"></span></button>
-             </div>
-         </form>
-         <p class="text-center">Technology is best when it brings people  <a href="#">together.</a></p>
-     </div>
- </div>
-</div>
-</div>
+            </div>
+        </div>
+    </div>
 </section>
+<div class="success-popup" id="successPopup">
+    <p>Registration successful! Thank you for registering.</p>
+    <div class="btn-ok" onclick="refreshPage()">OK</div>
+</div>
+
+<script>
+   function showSuccessPopup(event) {
+        event.preventDefault(); // Prevent form submission (to keep the popup visible)
+        // Show the success message popup
+        document.getElementById('successPopup').style.display = 'block';
+        // Hide the form
+        document.querySelector('.login-wrap').style.display = 'none';
+    }
+
+    function refreshPage() {
+        // Refresh the page after the user clicks "OK"
+        location.reload();
+    }
+</script>
+
 </section>
  <!-- ABOUT -->
  <section class="ftco-section bg-light" id="about" style="position: relative; padding: 95px 0; display: block; box-sizing: border-box;">
@@ -148,7 +206,7 @@
               <span><i class="fa fa-users"></i></span>
               <figcaption>
                 <h3>Professional Trainers</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+                <p>Learn from experienced professionals who are passionate about teaching and guiding students to success.</p>
               </figcaption>
             </figure>
   
@@ -156,23 +214,24 @@
               <span><i class="fa fa-certificate"></i></span>
               <figcaption>
                 <h3>International Certifications</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+                <p>Earn recognized certifications that validate your expertise and make you a highly sought-after candidate in the tech industry. </p>
               </figcaption>
             </figure>
   
             <figure>
               <span><i class="fa fa-bar-chart-o"></i></span>
               <figcaption>
-                <h3>Free for 3 months</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+                <h3>Practical Focus</h3>
+                <p>We emphasize hands-on learning, empowering students to confidently apply their skills in real-world scenarios.</p>
               </figcaption>
             </figure>
           </div>
+  
         </div>
   
         <div class="col-md-offset-1 col-md-4 col-sm-12" style="margin-left: 8.33333333%;">
-          <div class="video-container">
-            <video controls  autoplay muted>
+          <div class="video-container" style="margin-top: 78px;">
+            <video controls autoplay muted>
               <source src="./assets/videoplayback.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -180,14 +239,57 @@
         </div>
   
       </div>
+      <div class="about-details">
+        <h3>About Us:</h3>
+        <p>
+          At Brainiacs, we are passionate about empowering students to unlock their full potential and excel in the ever-evolving world of technology. Our mission is to bridge the gap between education and industry requirements, equipping learners with the skills and knowledge they need to thrive in technical job roles within software companies.
+        </p>
+        <!-- More details can go here... -->
+      </div>
+
+      <div class="about-details">
+        <h3>What We Do:</h3>
+        <p>
+          At Brainiacs, we specialize in designing and delivering specialized training programs tailored to meet the demands of various technical job roles in software companies. We understand that the tech industry is dynamic, and employers are constantly seeking skilled professionals to drive innovation and success. That's why our courses are carefully curated by industry experts to ensure they align with the latest trends and technologies.
+        </p>
+        <!-- More details can go here... -->
+      </div>
+
+      <div class="about-details">
+        <h3>Why Choose Brainiacs:</h3>
+        <p>
+          Industry-Relevant Curriculum: Our courses are designed to meet the demands of the software industry, ensuring that students acquire the right skills and knowledge that employers seek.
+        </p>
+        <!-- More details can go here... -->
+      </div>
     </div>
   </section>
   
+  
    <style>
  /* Additional styles for the "About Us" section */
+/* Additional styles for the "About Us" section */
 #about {
   padding: 60px 0;
 }
+.about-details {
+            margin-top: 30px; /* Add spacing between the details */
+        }
+
+        .about-details h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #131413;
+        }
+
+        .about-details p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            list-style-type: disc; /* Use disc bullet points */
+            padding-left: 20px; /* Add some spacing between the bullet and text */
+        }
 
 .about-info h2 {
   font-size: 32px;
@@ -205,8 +307,8 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  width: 450px;
-  height: 400px;
+  width: 470px;
+  height: 410px;
   margin: 0 auto;
 }
 
@@ -247,71 +349,94 @@
   font-size: 16px;
 }
 
+
    </style>
 
 <section class="ftco-section">
-   <div class="container">
-      <div class="row justify-content-center pb-4">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<span class="subheading">Start Learning Today</span>
-            <h2 class="mb-4">Browse Online Course Category</h2>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-     <div class="col-md-3 col-lg-2">
-        <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
-           <div class="text w-100 text-center">
-              <h3>IT &amp; Software</h3>
-              <span>100 course</span>
-          </div>
-      </a>
-  </div>
-  <div class="col-md-3 col-lg-2">
-    <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-9.jpg);">
-       <div class="text w-100 text-center">
-          <h3>Music</h3>
-          <span>100 course</span>
-      </div>
-  </a>
-</div>
-<div class="col-md-3 col-lg-2">
-    <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-3.jpg);">
-       <div class="text w-100 text-center">
-          <h3>Photography</h3>
-          <span>100 course</span>
-      </div>
-  </a>
-</div>
-<div class="col-md-3 col-lg-2">
-    <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-5.jpg);">
-       <div class="text w-100 text-center">
-          <h3>Marketing</h3>
-          <span>100 course</span>
-      </div>
-  </a>
-</div>
-<div class="col-md-3 col-lg-2">
-    <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-8.jpg);">
-       <div class="text w-100 text-center">
-          <h3>Health</h3>
-          <span>100 course</span>
-      </div>
-  </a>
-</div>
-<div class="col-md-3 col-lg-2">
-    <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-6.jpg);">
-       <span class="text w-100 text-center">
-          <h3>Audio Video</h3>
-          <span>100 course</span>
-      </span>
-  </a>
-</div>
-<div class="col-md-12 text-center mt-5">
-    <a href="#" class="btn btn-secondary">See All Courses</a>
-</div>
-</div>
-</div>
-</section>
+    <div class="container">
+       <div class="row justify-content-center pb-4">
+           <div class="col-md-12 heading-section text-center ftco-animate">
+               <span class="subheading">Start Learning Today</span>
+             <h2 class="mb-4">Browse Online Course Category</h2>
+         </div>
+     </div>
+     <div class="row justify-content-center">
+      <div class="col-md-3 col-lg-2">
+         <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
+            <div class="text w-100 text-center">
+               <h3>Web Development</h3>
+               <span>4+ courses</span>
+           </div>
+       </a>
+   </div>
+   <div class="col-md-3 col-lg-2">
+     <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/d1.jpg);">
+        <div class="text w-100 text-center">
+           <h3>Data Science</h3>
+           <span>3+ courses</span>
+       </div>
+   </a>
+ </div>
+ <div class="col-md-3 col-lg-2">
+     <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-3.jpg);">
+        <div class="text w-100 text-center">
+           <h3>Artificial Intelligence</h3>
+           <span>4+ courses</span>
+       </div>
+   </a>
+ </div>
+ <div class="col-md-3 col-lg-2">
+     <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/d31.png);">
+        <div class="text w-100 text-center">
+           <h3>Mobile Development</h3>
+           <span>4+ course</span>
+       </div>
+   </a>
+ </div>
+ <div class="col-md-3 col-lg-2">
+     <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/d2.jpg);">
+        <div class="text w-100 text-center">
+           <h3>Coming soon...</h3>
+           <span>Coming Soon...</span>
+       </div>
+   </a>
+ </div>
+ <div class="col-md-12 text-center mt-5">
+     <a href="#" class="btn btn-secondary" style="margin-left: -46px;">See All Courses</a>
+ </div>
+ </div>
+ </div>
+ </section>
+ <style>
+     .course-category {
+            /* margin-bottom: 30px;  */
+            padding: 20px; /* Increase the padding to increase the height of each item */
+            height: 160px; 
+            width: 150px;/* Increase the height of each item */
+            background-size: cover;
+        }
+
+        .course-category .text {
+            color: #fff;
+        }
+
+        .course-category h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .course-category span {
+            font-size: 16px;
+        }
+        .col-md-3 {
+            margin-right: 20px; /* Increase the horizontal gap between each .col-md-3 element */
+        }
+
+        /* To prevent the last item from having a right margin */
+        .col-md-3:last-child {
+            margin-right: 0;
+        }
+ </style>
 
 <section class="ftco-section bg-light">
    <div class="container">
@@ -418,48 +543,83 @@
 </section>
 
 <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
- <div class="overlay"></div>
- <div class="container">
-    <div class="row">
-       <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-         <div class="block-18 d-flex align-items-center">
-            <div class="icon"><span class="flaticon-online"></span></div>
-            <div class="text">
-             <strong class="number" data-number="400">0</strong>
-             <span>Online Courses</span>
-         </div>
-     </div>
- </div>
- <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-     <div class="block-18 d-flex align-items-center">
-        <div class="icon"><span class="flaticon-graduated"></span></div>
-        <div class="text">
-         <strong class="number" data-number="4500">0</strong>
-         <span>Students Enrolled</span>
-     </div>
- </div>
-</div>
-<div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
- <div class="block-18 d-flex align-items-center">
-    <div class="icon"><span class="flaticon-instructor"></span></div>
-    <div class="text">
-     <strong class="number" data-number="1200">0</strong>
-     <span>Experts Instructors</span>
- </div>
-</div>
-</div>
-<div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
- <div class="block-18 d-flex align-items-center">
-    <div class="icon"><span class="flaticon-tools"></span></div>
-    <div class="text">
-     <strong class="number" data-number="300">0</strong>
-     <span>Hours Content</span>
- </div>
-</div>
-</div>
-</div>
-</div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 d-flex align-items-center">
+                    <div class="icon"><span class="flaticon-online"></span></div>
+                    <div class="text">
+                        <strong class="number" data-number="400">0</strong>
+                        <span>Online Courses</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 d-flex align-items-center">
+                    <div class="icon"><span class="flaticon-graduated"></span></div>
+                    <div class="text">
+                        <strong class="number" data-number="4500">0</strong>
+                        <span>Students Enrolled</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 d-flex align-items-center">
+                    <div class="icon"><span class="flaticon-instructor"></span></div>
+                    <div class="text">
+                        <strong class="number" data-number="1200">0</strong>
+                        <span>Experts Instructors</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 d-flex align-items-center">
+                    <div class="icon"><span class="flaticon-tools"></span></div>
+                    <div class="text">
+                        <strong class="number" data-number="300">0</strong>
+                        <span>Hours Content</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+<style>
+    #section-counter .row {
+            display: flex; /* Use Flexbox */
+            justify-content: space-between; /* Distribute items along the row */
+        }
+
+        .col-md-3 {
+            flex: 1; /* Distribute equal width to all columns */
+        }
+
+        .counter-wrap {
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 48px;
+            color: #2fa840;
+        }
+
+        .text {
+            margin-top: 15px;
+        }
+
+        .text .number {
+            font-size: 32px;
+            font-weight: bold;
+            display: block;
+            color: #2fa840;
+        }
+
+        .text span {
+            font-size: 16px;
+            color: #888;
+        }
+</style>
 
 <section class="ftco-section ftco-about img">
    <div class="container">
@@ -477,10 +637,10 @@
              <div class="col-md-6 pl-md-5 py-5">
               <div class="row justify-content-start pb-3">
                   <div class="col-md-12 heading-section ftco-animate">
-                     <span class="subheading">Enhanced Your Skills</span>
-                     <h2 class="mb-4">Learn Anything You Want Today</h2>
-                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                     <p><a href="#" class="btn btn-primary">Get in touch with us</a></p>
+                     <span class="subheading">Enhance Your Skills</span>
+                     <h2 class="mb-4">"Unleash Your Tech Potential with Brainiacs!"</h2>
+                     <p>Are you ready to dive into the exciting world of software development? Let Brainiacs be your guiding light! Our expert counselors are here to help you chart your course and select the perfect training program tailored to your aspirations and goals. Whether you're a seasoned IT professional seeking to upskill or a newcomer eager to launch a career in tech, our team is dedicated to providing personalized counseling and guidance. Contact us today and embark on a transformative journey towards a successful future in software development! Let's code your dreams together!</p>
+                     <p><a href="#index" class="btn btn-primary">Get in touch with us</a></p>
                  </div>
              </div>
          </div>
@@ -496,7 +656,7 @@
    <div class="container">
     <div class="row pb-4">
       <div class="col-md-7 heading-section ftco-animate">
-         <span class="subheading">Testimonial</span>
+         <span class="subheading">Testimonials</span>
          <h2 class="mb-4">What Are Students Says</h2>
      </div>
  </div>
@@ -515,12 +675,12 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                 </p>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="mb-4">Brainiacs has been a game-changer for my career! The course I took was well-structured, and the instructors were brilliant. They provided practical examples and industry insights that made learning enjoyable and relevant. </p>
                 <div class="d-flex align-items-center">
-                   <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                   <div class="user-img" style="background-image: url(images/ud2.jpg)"></div>
                    <div class="pl-3">
-                      <p class="name">Roger Scott</p>
-                      <span class="position">Marketing Manager</span>
+                      <p class="name">Rajesh Kumar</p>
+                      <span class="position">Flutter developer</span>
                   </div>
               </div>
           </div>
@@ -536,12 +696,12 @@
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
         </p>
-        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <p class="mb-4">As a recent graduate looking to enter the tech industry, I was worried about the ever-changing landscape and how to stand out. Then I found Brainiacs! The course content was top-notch, and the instructors were very supportive.</p>
         <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+           <div class="user-img" style="background-image: url(images/ud4.jpg)"></div>
            <div class="pl-3">
-              <p class="name">Roger Scott</p>
-              <span class="position">Marketing Manager</span>
+              <p class="name">Ravi Bhatia</p>
+              <span class="position">Software Developer</span>
           </div>
       </div>
   </div>
@@ -557,12 +717,12 @@
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
         </p>
-        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <p class="mb-4">Brainiacs exceeded all my expectations! The curriculum was spot-on, covering the latest technologies and industry trends. The hands-on projects challenged me and allowed me to build a portfolio that impressed potential employers. </p>
         <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+           <div class="user-img" style="background-image: url(images/ud3.jpg)"></div>
            <div class="pl-3">
-              <p class="name">Roger Scott</p>
-              <span class="position">Marketing Manager</span>
+              <p class="name">Ashish Yadav</p>
+              <span class="position">AI Engineer</span>
           </div>
       </div>
   </div>
@@ -578,33 +738,12 @@
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
         </p>
-        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <p class="mb-4">Joining Brainiacs was the best decision I made for my career. The instructors were industry professionals who shared real-world experiences, making the learning experience engaging and practical and The course content was very well-structured.</p>
         <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+           <div class="user-img" style="background-image: url(images/ud1.jpg)"></div>
            <div class="pl-3">
-              <p class="name">Roger Scott</p>
-              <span class="position">Marketing Manager</span>
-          </div>
-      </div>
-  </div>
-</div>
-</div>
-<div class="item">
-    <div class="testimony-wrap py-4">
-      <div class="text">
-         <p class="star">
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </p>
-        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-        <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-           <div class="pl-3">
-              <p class="name">Roger Scott</p>
-              <span class="position">Marketing Manager</span>
+              <p class="name">Sachin Verma</p>
+              <span class="position">Frontend Developer</span>
           </div>
       </div>
   </div>
@@ -636,15 +775,15 @@
     <div class="row d-flex">
       <div class="col-md-6 heading-section pr-md-5 ftco-animate d-flex align-items-center">
          <div class="w-100 mb-4 mb-md-0">
-            <span class="subheading">Welcome to StudyLab</span>
-            <h2 class="mb-4">We Are StudyLab An Online Learning Center</h2>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <span class="subheading">Welcome to Brainiacs</span>
+            <h2 class="mb-4">Your Gateway to Success in the World of Technology! </h2>
+            <p>Step into a world of endless possibilities as you embark on a transformative learning experience with Brainiacs. We are thrilled to welcome you to our cutting-edge Edtech platform, dedicated to empowering you for a thriving career in the dynamic landscape of the tech industry</p>
+            <p>Learn from meticulously curated courses crafted by industry experts, gaining practical wisdom and expertise. Benefit from the guidance of passionate instructors who bring real-world experiences to the forefront. Gain a competitive edge with comprehensive exam and interview preparation, earning recognized certifications. Let's unlock your potential and shape a brilliant future together!</p>
             <div class="d-flex video-image align-items-center mt-md-4">
-              <a href="#" class="video img d-flex align-items-center justify-content-center" style="background-image: url(images/about.jpg);">
+              <a href="#home" class="video img d-flex align-items-center justify-content-center" style="background-image: url(images/about.jpg);">
                  <span class="fa fa-play-circle"></span>
              </a>
-             <h4 class="ml-4">Learn anything from StudyLab, Watch video</h4>
+             <h4 class="ml-4">Learn anything from Brainiacs, Watch video</h4>
          </div>
      </div>
  </div>
@@ -655,7 +794,7 @@
             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tools"></span></div>
             <div class="media-body">
               <h3 class="heading mb-3">Top Quality Content</h3>
-              <p>A small river named Duden flows by their place and supplies</p>
+              <p>Learn from meticulously curated courses crafted by industry experts, ensuring you receive the finest educational experience.</p>
           </div>
       </div>      
   </div>
@@ -664,7 +803,7 @@
         <div class="icon icon-2 d-flex align-items-center justify-content-center"><span class="flaticon-instructor"></span></div>
         <div class="media-body">
           <h3 class="heading mb-3">Highly Skilled Instructor</h3>
-          <p>A small river named Duden flows by their place and supplies</p>
+          <p>Benefit from the wisdom of seasoned professionals who bring real-world experiences to the forefront of your learning journey. </p>
       </div>
   </div>    
 </div>
@@ -672,8 +811,8 @@
   <div class="services">
     <div class="icon icon-3 d-flex align-items-center justify-content-center"><span class="flaticon-quiz"></span></div>
     <div class="media-body">
-      <h3 class="heading mb-3">World Class &amp; Quiz</h3>
-      <p>A small river named Duden flows by their place and supplies</p>
+      <h3 class="heading mb-3">Exam &amp; Interview preparation</h3>
+      <p>Gain the competitive edge with comprehensive exam and interview preparation, equipping you to stand out in the job market. </p>
   </div>
 </div>      
 </div>
@@ -682,7 +821,7 @@
     <div class="icon icon-4 d-flex align-items-center justify-content-center"><span class="flaticon-browser"></span></div>
     <div class="media-body">
       <h3 class="heading mb-3">Get Certified</h3>
-      <p>A small river named Duden flows by their place and supplies</p>
+      <p>Earn recognized certifications that validate your expertise and make you a highly sought-after candidate in the tech industry. s</p>
   </div>
 </div>      
 </div>

@@ -92,13 +92,50 @@
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
       <div class="col-md-7 ftco-animate">
-        <span class="subheading">Welcome to Brainiacs</span>
-        <h1 class="mb-4">We Are Online Platform For Make Learn</h1>
-        <p class="caps">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+        <span class="subheading" style="color: #193119;">Welcome to Brainiacs</span>
+        <h1 class="mb-4 typewriter repeat" style="color: #193119; font-size: 28px;cursor: none;">Your Gateway to Success! </h1>
+        <p class="caps" style="color: #1b381b;">where your aspirations become reality! Let's unlock your potential and shape a brilliant future together. </p>
     </div>
 </div>
 </div>
 </div>
+<style>
+    .typewriter {
+  overflow: hidden; /* Ensures the typewriter effect works */
+  white-space: nowrap; /* Keeps the text in a single line */
+  letter-spacing: 0.25em; /* Adjust the spacing between letters */
+  animation: typing 3.5s steps(40, end) both; /* Animation settings with fill mode */
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Hide the blinking cursor after animation is complete */
+.typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #193119;
+  }
+}
+</style>
 <style>
     /* Your CSS styles go here */
     /* Example style for the success message container */
@@ -135,6 +172,41 @@
     }
 
     .success-popup .btn-ok:hover {
+        background-color: #f8f8f8;
+    }
+    .required-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #ff4d4d;
+        color: #fff;
+        border-radius: 5px;
+        z-index: 9999;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .required-popup p {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .required-popup .btn-ok {
+        cursor: pointer;
+        color: #fff;
+        background-color: #fff;
+        color: #ff4d4d;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .required-popup .btn-ok:hover {
         background-color: #f8f8f8;
     }
 </style>
@@ -176,20 +248,40 @@
     <p>Registration successful! Thank you for registering.</p>
     <div class="btn-ok" onclick="refreshPage()">OK</div>
 </div>
+<div class="required-popup" id="requiredPopup">
+    <p>All fields are required. Please fill in all the required fields.</p>
+    <div class="btn-ok" onclick="closeRequiredPopup()">OK</div>
+</div>
+
 
 <script>
-   function showSuccessPopup(event) {
-        event.preventDefault(); // Prevent form submission (to keep the popup visible)
-        // Show the success message popup
-        document.getElementById('successPopup').style.display = 'block';
-        // Hide the form
-        document.querySelector('.login-wrap').style.display = 'none';
-    }
+      function showSuccessPopup(event) {
+            event.preventDefault(); // Prevent form submission (to keep the popup visible)
+            const fullName = document.querySelector('input[placeholder="John Doe"]').value;
+            const email = document.querySelector('input[placeholder="johndoe@gmail.com"]').value;
+            const mobileNumber = document.querySelector('input[placeholder="Mobile number"]').value;
+            const collegeName = document.querySelector('input[placeholder="College Name"]').value;
 
-    function refreshPage() {
-        // Refresh the page after the user clicks "OK"
-        location.reload();
-    }
+            if (fullName && email && mobileNumber && collegeName) {
+                // All fields are filled, show the success message
+                document.getElementById('successPopup').style.display = 'block';
+                // Hide the form
+                document.querySelector('.login-wrap').style.display = 'none';
+            } else {
+                // Not all fields are filled, show the "All fields are required" message
+                document.getElementById('requiredPopup').style.display = 'block';
+            }
+        }
+
+        function closeRequiredPopup() {
+            // Close the "All fields are required" message popup
+            document.getElementById('requiredPopup').style.display = 'none';
+        }
+
+        function refreshPage() {
+            // Refresh the page after the user clicks "OK"
+            location.reload();
+        }
 </script>
 
 </section>
@@ -378,7 +470,7 @@
    </a>
  </div>
  <div class="col-md-3 col-lg-2">
-     <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-3.jpg);">
+     <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/d5.jpg);">
         <div class="text w-100 text-center">
            <h3>Artificial Intelligence</h3>
            <span>4+ courses</span>
@@ -388,15 +480,15 @@
  <div class="col-md-3 col-lg-2">
      <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/d31.png);">
         <div class="text w-100 text-center">
-           <h3>Mobile Development</h3>
+           <h3>App Development</h3>
            <span>4+ course</span>
        </div>
    </a>
  </div>
  <div class="col-md-3 col-lg-2">
-     <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/d2.jpg);">
+     <a href="#" class="course-category img d-flex align-items-center justify-content-center" style="background-image: url(images/work-5.jpg);">
         <div class="text w-100 text-center">
-           <h3>Coming soon...</h3>
+           <h3>Marketing</h3>
            <span>Coming Soon...</span>
        </div>
    </a>
@@ -550,7 +642,7 @@
                 <div class="block-18 d-flex align-items-center">
                     <div class="icon"><span class="flaticon-online"></span></div>
                     <div class="text">
-                        <strong class="number" data-number="400">0</strong>
+                        <strong class="number" data-number="10">0</strong>
                         <span>Online Courses</span>
                     </div>
                 </div>
@@ -559,7 +651,7 @@
                 <div class="block-18 d-flex align-items-center">
                     <div class="icon"><span class="flaticon-graduated"></span></div>
                     <div class="text">
-                        <strong class="number" data-number="4500">0</strong>
+                        <strong class="number" data-number="100">0</strong>
                         <span>Students Enrolled</span>
                     </div>
                 </div>
@@ -568,7 +660,7 @@
                 <div class="block-18 d-flex align-items-center">
                     <div class="icon"><span class="flaticon-instructor"></span></div>
                     <div class="text">
-                        <strong class="number" data-number="1200">0</strong>
+                        <strong class="number" data-number="20">0</strong>
                         <span>Experts Instructors</span>
                     </div>
                 </div>
@@ -698,9 +790,9 @@
         </p>
         <p class="mb-4">As a recent graduate looking to enter the tech industry, I was worried about the ever-changing landscape and how to stand out. Then I found Brainiacs! The course content was top-notch, and the instructors were very supportive.</p>
         <div class="d-flex align-items-center">
-           <div class="user-img" style="background-image: url(images/ud4.jpg)"></div>
+           <div class="user-img" style="background-image: url(images/ud7.jpg)"></div>
            <div class="pl-3">
-              <p class="name">Ravi Bhatia</p>
+              <p class="name">Ravi Teja</p>
               <span class="position">Software Developer</span>
           </div>
       </div>

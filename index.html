@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -21,35 +23,76 @@
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="height: 82px;">
-   <div class="container">
-    <a class="navbar-brand" href="index.html" style="margin-left: -80px; margin-top: -30px;">
-        <img src="./assets/logo2.png" alt="Your Logo" class="logo-image">
-      </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="oi oi-menu"></span> Menu
-   </button>
+    <style>
+        /* Your existing CSS styles */
 
-   <div class="collapse navbar-collapse" id="ftco-nav">
-       <ul class="navbar-nav ml-auto">
-         <li class="nav-item active"><a href="#index" class="nav-link">Home</a></li>
-         <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-         <li class="nav-item"><a href="#course" class="nav-link">Course</a></li>
-         <li class="nav-item"><a href="courselist.html" class="nav-link">Instructor</a></li>
-         <li class="nav-item"><a href="course1.html" class="nav-link">Blog</a></li>
-         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-     </ul>
- </div>
-</div>
-</nav>
-<style>
-   
-   .logo-image {
+    /* Add new styles for the mobile view */
+    @media screen and (max-width: 768px) {
+        /* ... Your existing media query styles ... */
+
+        /* Set logo and menu button side by side */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 170px; /* Adjust the height of the logo as needed */
+            margin-right: 10px; /* Add some spacing between logo and menu button */
+        }
+
+        .navbar-toggler {
+            margin-left: auto; /* Push the menu button to the right */
+        }
+
+        /* Ensure the navbar is full width and centered */
+        #ftco-navbar .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .ftco-navbar-light.scrolled.awake {
+          margin-right: 112px;
+        }
+        .ftco-navbar-light.scrolled.sleep {
+          margin-right: 112px;
+        }
+    }
+/* Your existing CSS styles */
+
+/* Add new styles for the mobile view */
+@media screen and (max-width: 768px) {
+    /* ... Your existing media query styles ... */
+
+    /* Set logo and menu button side by side */
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand img {
+        height: 170px; /* Adjust the height of the logo for mobile view */
+        margin-left: -16px; /* Add some spacing between logo and menu button */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Push the menu button to the right */
+    }
+
+    /* Ensure the navbar is full width and centered */
+    #ftco-navbar {
+      margin-top: -82px;
+    }
+    }
+
+/* Custom styles for the web view */
+@media screen and (min-width: 769px) {
+  .logo-image {
   height: 210px; 
+  margin-top: -12px;
 }
-
 .navbar {
   padding: 0.5rem 1rem; 
   background-color: #343a40; 
@@ -83,23 +126,78 @@
   left: 0;
   right: 0;
   z-index: 9999;
+  height: 82px;
 }
-</style>
-<!-- END nav -->
-<section id="index">
-<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-      <div class="col-md-7 ftco-animate">
-        <span class="subheading" style="color: #202222;">Welcome to Brainiacs</span>
-        <h1 class="mb-4 typewriter repeat" style="color: #29ca8e; font-size: 32px;cursor: none;">Your Gateway to Success! </h1>
-        <p class="caps" style="color: #161716;">where your aspirations become reality! Let's unlock your potential and shape a brilliant future together. </p>
+
+}
+@keyframes changeColor {
+            0% { color: #ffffff; }
+            25% { color: #ff0000; } /* Change to red after 50% of animation duration */
+            50% { color: #19e40e; }
+            75% { color: #4b0ee4; } 
+            100% { color: #e40ec4; }  /* Change back to white at the end of the animation */
+        }
+
+        /* Animation for text color change */
+        .change-color-animation {
+            animation: changeColor 0.5s infinite; /* Change color every 5 seconds */
+        }
+         @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Apply the animation to the 'Welcome to Brainiacs' element */
+    .welcome-animation {
+        animation: fadeInDown 1s ease-in-out;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" >
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./assets/logo2.png" alt="Your Logo" class="logo-image">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="#index" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#course" class="nav-link">Course</a></li>
+                <li class="nav-item"><a href="courselist.html" class="nav-link">Instructor</a></li>
+                <li class="nav-item"><a href="course1.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </div>
-</div>
-</div>
-</div>
-<style>
+    </nav>
+<!-- END nav -->
+  <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+          <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+              <div class="col-md-7 ftco-animate">
+                  <span class="subheading animate__animated animate__fadeInDown" style="color: #ffffff">Welcome to Brainiacs</span>
+                  <h1 class="mb-4 typewriter repeat" style="color: #29ca8e; font-size: 32px;cursor: none;">Your Gateway to Success! </h1>
+                  <p class="caps" style="color: #000000;"><b>where your aspirations become reality! Let's unlock your potential and shape a brilliant future together.
+                    </b> </p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<!-- <style>
     .typewriter {
   overflow: hidden; /* Ensures the typewriter effect works */
   white-space: nowrap; /* Keeps the text in a single line */
@@ -135,7 +233,7 @@
     border-color: #193119;
   }
 }
-</style>
+</style> -->
 <style>
     /* Your CSS styles go here */
     /* Example style for the success message container */
@@ -216,7 +314,7 @@
             <div class="col-md-7"></div>
             <div class="col-md-5 order-md-last">
                 <div class="login-wrap p-4 p-md-5">
-                    <h3 class="mb-4">Register Now</h3>
+                    <h3 class="mb-4 change-color-animation">Register Now</h3>
                     <form action="#" class="signup-form" onsubmit="showSuccessPopup(event)">
                         <div class="form-group">
                             <label class="label" for="name">Full Name</label>

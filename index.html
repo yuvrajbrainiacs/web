@@ -53,12 +53,12 @@
             align-items: center;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
-        .ftco-navbar-light.scrolled.awake {
+        /* .ftco-navbar-light.scrolled.awake {
           margin-right: 112px;
         }
         .ftco-navbar-light.scrolled.sleep {
           margin-right: 112px;
-        }
+        } */
     }
 /* Your existing CSS styles */
 
@@ -85,6 +85,20 @@
     #ftco-navbar {
       margin-top: -82px;
     }
+    .video-container {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 409px;
+    height: 410px;
+    margin: 0 auto;
+    }
+    .vid-control{
+      margin-left: -4.089%;
+    }
+    .cbutton{
+    margin-left: -30px;
+  }
     }
 
 /* Custom styles for the web view */
@@ -127,6 +141,20 @@
   right: 0;
   z-index: 9999;
   height: 82px;
+}
+.vid-control{
+  margin-left:  8.33333333%;;
+}
+.video-container {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 470px;
+  height: 410px;
+  margin: 0 auto;
+}
+.cbutton{
+  margin-left: -46px;
 }
 
 }
@@ -421,9 +449,9 @@
   
         </div>
   
-        <div class="col-md-offset-1 col-md-4 col-sm-12" style="margin-left: 8.33333333%;">
+        <div class="col-md-offset-1 col-md-4 col-sm-12 vid-control">
           <div class="video-container" style="margin-top: 78px;">
-            <video controls autoplay muted>
+            <video controls autoplay muted loop>
               <source src="./assets/videoplayback.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -495,14 +523,6 @@
   margin-bottom: 30px;
 }
 
-.video-container {
-  position: relative;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 470px;
-  height: 410px;
-  margin: 0 auto;
-}
 
 .video-container video {
   width: 100%;
@@ -594,7 +614,7 @@
    </a>
  </div>
  <div class="col-md-12 text-center mt-5">
-     <a href="#" class="btn btn-secondary" style="margin-left: -46px;">See All Courses</a>
+     <a href="#" class="btn btn-secondary cbutton">See All Courses</a>
  </div>
  </div>
  </div>

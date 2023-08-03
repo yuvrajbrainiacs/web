@@ -1,11 +1,11 @@
 @media (min-width: 1200px) {
-  .nav-item.dropdown .dropdown-menu {
+  .nav1-item.dropdown .dropdown-menu {
     display: block;
     visibility: hidden;
     opacity: 0;
     top: 120%;
   }
-  .nav-item.dropdown:hover .dropdown-menu {
+  .nav1-item.dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     top: 100%;
@@ -22,7 +22,7 @@
   .client-logo {
     margin-bottom: 20px;
   }
-  .site-navigation {
+  .site-nav1igation {
     padding: 0px 20px;
   }
 }
@@ -31,16 +31,16 @@
   .section-padding {
     padding: 60px 0px;
   }
-  .site-navigation {
+  .site-nav1igation {
     padding: 0px 20px !important;
   }
   .container-padding {
     padding: 0px 20px;
   }
-  .navbar {
+  .nav11bar {
     padding: 10px 10px;
   }
-  .navbar-nav .nav-link {
+  .nav11bar-nav11 .nav1-link {
     padding: 14px 20px;
     border-right: 0px;
   }
@@ -72,13 +72,13 @@
 }
 
 @media (max-width: 768px) {
-  .site-navigation {
+  .site-nav1igation {
     padding: 20px 20px;
   }
-  .navbar-nav .nav-link {
+  .nav1bar-nav1 .nav1-link {
     padding: 10px 0px;
   }
-  .navbar-collapse {
+  .nav1bar-collapse {
     padding: 20px 0px;
   }
   .banner-3 .banner-content h1 {
@@ -140,10 +140,10 @@
 }
 
 @media (max-width: 480px) {
-  .site-navigation {
+  .site-nav1igation {
     padding: 10px 10px;
   }
-  .navbar-nav .nav-link {
+  .nav1bar-nav1 .nav1-link {
     padding: 14px 20px;
   }
   .header-contact li, .header-socials li {

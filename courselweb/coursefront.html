@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from themeturn.com/tf-db/eduhash/theme/course-single2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 10:31:54 GMT -->
+<!-- Mirrored from themeturn.com/tf-db/eduhash/theme/course-grid-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 10:29:22 GMT -->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Education LMS template by Dreambuzz">
+  <meta name="description" content="Education ">
   <meta name="keywords" content="Eduhash,education,lms,seo,course,online,learning,caoch,training,tutor">
   <meta name="author" content="themeturn.com">
 
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap.css">
   <!-- Iconfont Css -->
   <link rel="stylesheet" href="../assets/vendors/fontawesome/css/all.css">
-  <link rel="stylesheet" href="assets/vendors/flaticon/flaticon.css">
+  <link rel="stylesheet" href="../assets/vendors/flaticon/flaticon.css">
   <!-- animate.css -->
   <link rel="stylesheet" href="../assets/vendors/animate-css/animate.css">
   <link rel="stylesheet" href="../assets/vendors/owl/assets/owl.carousel.min.css">
@@ -41,86 +41,231 @@
     
     <link rel="stylesheet" href="../css/flaticon.css">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+      /* Your existing CSS styles */
+
+  /* Add new styles for the mobile view */
+  @media screen and (max-width: 768px) {
+      /* ... Your existing media query styles ... */
+
+      /* Set logo and menu button side by side */
+      .navbar-brand {
+          display: flex;
+          align-items: center;
+      }
+
+      .navbar-brand img {
+          height: 170px; /* Adjust the height of the logo as needed */
+          margin-right: 10px; /* Add some spacing between logo and menu button */
+      }
+
+      .navbar-toggler {
+          margin-left: auto; /* Push the menu button to the right */
+      }
+
+      /* Ensure the navbar is full width and centered */
+      #ftco-navbar .container {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          overflow-x: hidden; /* Prevent horizontal scrolling */
+      }
+      /* .ftco-navbar-light.scrolled.awake {
+        margin-right: 112px;
+      }
+      .ftco-navbar-light.scrolled.sleep {
+        margin-right: 112px;
+      } */
+  }
+/* Your existing CSS styles */
+
+/* Add new styles for the mobile view */
+@media screen and (max-width: 768px) {
+  /* ... Your existing media query styles ... */
+
+  /* Set logo and menu button side by side */
+  .navbar-brand {
+      display: flex;
+      align-items: center;
+  }
+  .backi{
+    background: #7ab195a8 !important;
+  }
+
+  .navbar-brand img {
+      height: 170px; /* Adjust the height of the logo for mobile view */
+      margin-left: -16px; /* Add some spacing between logo and menu button */
+  }
+
+  .navbar-toggler {
+      margin-left: auto; /* Push the menu button to the right */
+  }
+
+  /* Ensure the navbar is full width and centered */
+  #ftco-navbar {
+    margin-top: -82px;
+  }
+  .video-container {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 409px;
+  height: 410px;
+  margin: 0 auto;
+  }
+  .vid-control{
+    margin-left: -4.089%;
+  }
+  .cbutton{
+  margin-left: -30px;
+}
+.ftco-navbar-light.scrolled .navbar-toggler{
+  color:rgb(104 96 96 / 50%) !important
+}
+  }
+
+/* Custom styles for the web view */
+@media screen and (min-width: 769px) {
+.logo-image {
+height: 210px; 
+margin-top: -14px;
+}
+.navbar {
+padding: 0.5rem 1rem; 
+background-color: #343a40; 
+}
+
+.navbar-nav .nav-item {
+margin-left: 10px; 
+}
+
+.nav-link {
+color: white; 
+font-size: 16px; 
+padding: 10px 15px; 
+}
+
+.nav-link:hover {
+background-color: #5a5c63; 
+}
+
+.navbar-toggler {
+border: none; 
+}
+
+.navbar-toggler-icon {
+background-color: white; 
+}
+
+#ftco-navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 9999;
+height: 82px;
+}
+.vid-control{
+margin-left:  8.33333333%;;
+}
+.video-container {
+position: relative;
+border-radius: 50%;
+overflow: hidden;
+width: 470px;
+height: 410px;
+margin: 0 auto;
+}
+.cbutton{
+margin-left: -46px;
+}
+
+}
+@keyframes changeColor {
+          0% { color: #ffffff; }
+          25% { color: #ff0000; } /* Change to red after 50% of animation duration */
+          50% { color: #19e40e; }
+          75% { color: #4b0ee4; } 
+          100% { color: #e40ec4; }  /* Change back to white at the end of the animation */
+      }
+
+      /* Animation for text color change */
+      .change-color-animation {
+          animation: changeColor 0.5s infinite; /* Change color every 5 seconds */
+      }
+       @keyframes fadeInDown {
+      0% {
+          opacity: 0;
+          transform: translateY(-20px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  /* Apply the animation to the 'Welcome to Brainiacs' element */
+  .welcome-animation {
+      animation: fadeInDown 1s ease-in-out;
+  }
+  .edutim-course-content .learn-press-nav-tabs .nav-tabs {
+    border-bottom: 2px solid transparent;
+    background: #F8F9F8;
+    transition: all .4s ease 0s;
+    margin-bottom: 40px;
+    border-radius: 5px;
+  }
+  .edutim-course-content .nav-tabs .nav-link.active, .edutim-course-content .nav-tabs .nav-item.show .nav-link{
+    color: #222;
+    border: 0px;
+    background: #F8F9F8;
+    border-bottom: 2px solid #20ad96;
+  }
+  .edutim-course-content .learn-press-nav-tabs .course-nav a{
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .4s ease 0s;
+    padding: 15px 20px;
+  }
+  .edutim-course-content .learn-press-nav-tabs .course-nav a{
+    color: #ababab;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .4s ease 0s;
+    border: 0px;
+    border-bottom: 2px solid transparent;
+    padding: 15px 20px;
+  }
+
+</style>
 
 </head>
 
 <body id="top-header">
-
-
-    
-<header> 
-    <!-- Main Menu Start -->
-    <div class="site-navigation main_menu menu-style-2" id="mainmenu-area">
-      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar  ftco-navbar-light" id="ftco-navbar" style="height: 82px; background-color: #4b8a50;">
-    <div class="container">
-     <a class="navbar-brand" href="../index.html" style="margin-left: -80px; margin-top: -30px;">
-       <img src="../assets/logo2.png" alt="Your Logo" class="logo-image">
-       </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="oi oi-menu"></span> Menu
-    </button>
-   
-    <div class="collapse navbar-collapse" id="ftco-nav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-        <li class="nav-item active"><a href="../course.html" class="nav-link">Course</a></li>
-        <li class="nav-item"><a href="instructor.html" class="nav-link">Instructor</a></li>
-        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-   </div>
-   </nav>
-   <style>
-    
-    .logo-image {
-     height: 210px; 
-   }
-   
-   .navbar {
-     padding: 0.5rem 1rem; 
-     background-color: #343a40; 
-   }
-   
-   .navbar-nav .nav-item {
-     margin-left: 10px; 
-   }
-   
-   .nav-link {
-     color: white; 
-     font-size: 16px; 
-     padding: 10px 15px; 
-   }
-   
-   .nav-link:hover {
-     background-color: #5a5c63; 
-   }
-   
-   .navbar-toggler {
-     border: none; 
-   }
-   
-   .navbar-toggler-icon {
-     background-color: white; 
-   }
-   
-   #ftco-navbar {
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     z-index: 9999;
-   }
-   </style>
-  </div>
-</header>
-
         
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light backi" id="ftco-navbar" >
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../assets/logo2.png" alt="Your Logo" class="logo-image">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
 
-
-
-<section class="page-header" style="background: #aacdb7; margin-top: -28px;">
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="#index" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#course" class="nav-link">Course</a></li>
+                <li class="nav-item"><a href="courselist.html" class="nav-link">Instructor</a></li>
+                <li class="nav-item"><a href="course1.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+<section class="page-header" style="background: #aacdb7;">
     <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 col-xl-8">
@@ -603,14 +748,14 @@ development tools, version control systems, and best practices to optimize web p
     Essential Scripts
     =====================================-->
     
-    <!-- Main jQuery -->
-    <script src="../assets/vendors/jquery/jquery.js"></script>
+   <!-- Main jQuery -->
+    <!-- <script src="../assets/vendors/jquery/jquery.js"></script> -->
     <!-- Bootstrap 4.5 -->
-    <script src="../assets/vendors/bootstrap/bootstrap.js"></script>
+    <!-- <script src="../assets/vendors/bootstrap/bootstrap.js"></script> -->
     <!-- Counterup -->
     <script src="../assets/vendors/counterup/waypoint.js"></script>
-    <script src="../assets/vendors/counterup/jquery.counterup.min.js"></script>
-    <script src="../assets/vendors/jquery.isotope.js"></script>
+    <!-- <script src="../assets/vendors/counterup/jquery.counterup.min.js"></script> -->
+    <!-- <script src="../assets/vendors/jquery.isotope.js"></script> -->
     <script src="../assets/vendors/imagesloaded.html"></script>
     <script src="../assets/vendors/owl/owl.carousel.min.js"></script>
     <script src="../assets/vendors/google-map/map.js"></script>

@@ -16,15 +16,15 @@
     var window_top = $(window).scrollTop() + 1;
 
     if (window_top > 50) {
-      $('.site-navigation ').addClass('menu_fixed animated fadeInDown');
+      $('.site-nav11igation ').addClass('menu_fixed animated fadeInDown');
     } else {
-      $('.site-navigation').removeClass('menu_fixed animated fadeInDown');
+      $('.site-nav1igation').removeClass('menu_fixed animated fadeInDown');
     }
   });
   $('.testimonials-slides').owlCarousel({
     loop: true,
     dots: true,
-    nav: false,
+    nav1: false,
     margin: 10,
     autoplayHoverPause: true,
     autoplay: false,
@@ -51,7 +51,7 @@
   $('.testimonials-slides-2').owlCarousel({
     loop: true,
     dots: true,
-    nav: false,
+    nav1: false,
     margin: 10,
     autoplayHoverPause: true,
     autoplay: false,
@@ -77,12 +77,12 @@
   $('.testimonials-slides-3').owlCarousel({
     loop: true,
     dots: true,
-    nav: false,
+    nav1: false,
     margin: 10,
     autoplayHoverPause: true,
     autoplay: false,
     responsiveClass: true,
-    // navText: [
+    // nav1Text: [
     //     "<i class='bx bx-left-arrow-alt'></i>",
     //     "<i class='bx bx-right-arrow-alt'></i>"
     // ],
@@ -111,13 +111,13 @@
   });
   $('.team-slider').owlCarousel({
     loop: true,
-    nav: false,
+    nav1: false,
     dots: true,
     autoplayHoverPause: true,
     autoplay: false,
-    navRewind: false,
+    nav1Rewind: false,
     margin: 30,
-    navText: ["<i class='bx bx-left-arrow-alt'></i>", "<i class='bx bx-right-arrow-alt'></i>"],
+    nav1Text: ["<i class='bx bx-left-arrow-alt'></i>", "<i class='bx bx-right-arrow-alt'></i>"],
     responsive: {
       0: {
         items: 1
